@@ -1,6 +1,6 @@
 function functionCall() {
 
-  var fromAddr = document.getElementById('userAddress').value
+  var fromAddr = document.getElementById('userAddress').innerHTML
 
   var contractAddr = '0x2B79dFf7cD509365B664ED7A1d4C06Ee04c15e31'
 
@@ -19,11 +19,14 @@ function functionCall() {
   args.push({from: fromAddr, value: value, gasPrice: gasPrice, gas: gas})
 
   var callback = function(err, txhash) {
-    console.log('error: ' + err)
-    console.log('txhash: ' + txhash)
-    alert('Vote Complete! https://ropsten.etherscan.io/address/0x2B79dFf7cD509365B664ED7A1d4C06Ee04c15e31')
+    if (err) {
+      alert(err)
+    } else {
+      alert("Vote Complete! " + txhash)
+    }
   }
 
   args.push(callback)
+
   contract[functionName].apply(this, args)
 }

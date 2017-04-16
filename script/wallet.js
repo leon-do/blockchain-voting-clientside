@@ -54,7 +54,8 @@ function newAddresses(password) {
 
 function setSeed() {
     var password = prompt('Enter Password to encrypt your seed', 'Password');
-                                          
+                                   
+    //lightwallet.js line 862       
     lightwallet.keystore.deriveKeyFromPassword(password, function(err, pwDerivedKey) {
     global_keystore = new lightwallet.keystore(
       document.getElementById('seed').value, 
@@ -77,7 +78,7 @@ function newAddresses(password) {
     lightwallet.keystore.deriveKeyFromPassword(password, function(err, pwDerivedKey) {
         global_keystore.generateNewAddress(pwDerivedKey, 1);
         var userAddress = global_keystore.getAddresses();
-        document.getElementById('userAddress').value = userAddress
+        document.getElementById('userAddress').innerHTML = userAddress
     })
 }
 
