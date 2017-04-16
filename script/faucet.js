@@ -8,13 +8,17 @@
 
 
 function faucet(userAddress){
-console.log(userAddress)
+
+    console.log(userAddress)
+    
     //check if addr has ETH
     var web3Provider = new HookedWeb3Provider({
         host: "https://ropsten.infura.io/5XLCCoLbx9Ey7RAjtzUq",
+        transaction_signer: global_keystore
     });
     web3.setProvider(web3Provider);
     var balance = parseFloat(web3.eth.getBalance('0x'+userAddress).toString())
+
     console.log(balance)
 
     if (balance === 0){
