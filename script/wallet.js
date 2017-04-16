@@ -36,19 +36,7 @@ function setWeb3Provider(keystore) {
 
 
 
-function newAddresses(password) {
 
-    if (password == '') {
-      password = prompt('Enter password to retrieve addresses', 'Password');
-    }
-
-    var numAddr = parseInt(document.getElementById('numAddr').value)
-   
-    lightwallet.keystore.deriveKeyFromPassword(password, function(err, pwDerivedKey) {
-      global_keystore.generateNewAddress(pwDerivedKey, numAddr);
-      var addresses = global_keystore.getAddresses();
-    })
-}
 
 
 
@@ -79,6 +67,9 @@ function newAddresses(password) {
         global_keystore.generateNewAddress(pwDerivedKey, 1);
         var userAddress = global_keystore.getAddresses();
         document.getElementById('userAddress').innerHTML = userAddress
+
+        // in faucet.js file
+        faucet(userAddress)
     })
 }
 

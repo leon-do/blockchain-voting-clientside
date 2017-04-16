@@ -13,7 +13,10 @@
     <script src="script/async.js"></script>
     <script src="script/wallet.js"></script>
     <script src="script/vote.js"></script>
-    <script src="script/viewVotes.js"></script>    
+    <script src="script/viewVotes.js"></script> 
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>     
+    <script src="script/faucet.js"></script>  
 </head>
 <body>
 
@@ -28,24 +31,26 @@ https://ropsten.etherscan.io/address/0x2B79dFf7cD509365B664ED7A1d4C06Ee04c15e31
 
 <br><br>
 
-    <!-- This is used to recover address -->
-    <input type="text" id="seed" value="" size="80"></input>
+    <!-- This is used to recover address WALLET.js -->
+    <input type="text" id="seed" value="" size="80" placeholder="cat dog record island"></input>
     <button onclick="setSeed()">Restore wallet from Seed</button>
 
 <br><br>
 
-    <!-- This displays user address -->
+    <!-- This displays user address WALLET.js -->
     <div> Your address: <div id='userAddress'></div></div>
 
 <br><br>
 
-    <!-- This Votes -->
+    <!-- This Votes votes.js -->
     <button onclick="functionCall()">Vote</button>
 
 <br><br>
 
+    <!-- VIEWVOTES.js -->
     <button onclick="viewVotes()">View Votes</button>
     <div id='viewVotes'></div>
+
 
 </body>
 </html>

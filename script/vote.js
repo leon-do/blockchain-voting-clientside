@@ -22,7 +22,7 @@ function functionCall() {
     if (err) {
       alert(err)
     } else {
-      alert("Vote Complete! " + txhash)
+      alert("Vote Complete! TxHash: " + txhash)
     }
   }
 
