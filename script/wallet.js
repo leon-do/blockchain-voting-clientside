@@ -2,7 +2,7 @@ var web3 = new Web3();
 var global_keystore;
 
 
-
+// Create New Account button
 function newWallet() {
 
   //creates a random string
@@ -25,21 +25,8 @@ function newWallet() {
 
 
 
-function setWeb3Provider(keystore) {
-    var web3Provider = new HookedWeb3Provider({
-        host: "https://ropsten.infura.io/5XLCCoLbx9Ey7RAjtzUq",
-        transaction_signer: keystore
-    });
-    web3.setProvider(web3Provider);
-}
 
-
-
-
-
-
-
-
+// Restore wallet from Seed button
 function setSeed() {
     var password = prompt('Enter Password to encrypt your seed', 'Password');
                                    
@@ -57,6 +44,10 @@ function setSeed() {
 }
 
 
+
+
+
+// from setSeed()
 function newAddresses(password) {
 
     if (password == '') {
@@ -76,4 +67,12 @@ function newAddresses(password) {
 
 
 
-
+// from setSeed()
+function setWeb3Provider(keystore) {
+    //connect web3 to ropsten server
+    var web3Provider = new HookedWeb3Provider({
+        host: "https://ropsten.infura.io/5XLCCoLbx9Ey7RAjtzUq",
+        transaction_signer: keystore
+    });
+    web3.setProvider(web3Provider);
+}
