@@ -6,6 +6,7 @@ var global_keystore;
 function newWallet() {
 
   //creates a random string
+  // https://walletgenerator.net/
   var extraEntropy = Math.random().toString(36).substring(2);
 
   //generates random seed
@@ -20,6 +21,7 @@ function newWallet() {
     pwDerivedKey);
   
   newAddresses(password);
+  setWeb3Provider(global_keystore);
   })
 }
 

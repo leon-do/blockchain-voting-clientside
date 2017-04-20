@@ -1,3 +1,5 @@
+//view Votes button
+
 function viewVotes(){
 
     var web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/5XLCCoLbx9Ey7RAjtzUq"));

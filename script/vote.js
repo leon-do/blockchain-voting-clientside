@@ -1,3 +1,5 @@
+//Vote button
+
 function functionCall() {
 
   var fromAddr = document.getElementById('userAddress').innerHTML
@@ -23,6 +25,7 @@ function functionCall() {
       alert(err)
     } else {
       alert("Vote Complete! TxHash: " + txhash)
+      console.log(txhash)
     }
   }
 
