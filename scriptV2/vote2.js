@@ -4,7 +4,7 @@ var args = ''
 
 
 userVote(userAddress, functionName, args, function(transactionNum){
-  console.log(transaction)
+  console.log(transactionNum)
 })
 
 function userVote(userAddress, functionName, args, cb) {
