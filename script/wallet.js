@@ -1,8 +1,9 @@
 var web3 = new Web3();
 var global_keystore;
 
-
 // Create New Account button
+// https://docs.google.com/document/d/1tUZgaZkgq8Yk1j9I0dAvVae71ulCwa6FEXHwsSCCCWE/edit
+
 function newWallet() {
 
   //creates a random string

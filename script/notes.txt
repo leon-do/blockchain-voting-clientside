@@ -1,0 +1,24 @@
+faucet(address, function(data){
+    data //returns transaction complete
+})
+
+viewVotes(contractAddress, contractInstance, function(data){
+    data //number of votes
+})
+
+vote(userAddress, contractAddress, abi, functionName, arguments, function(data){
+    data // vote complete
+})
+
+createWallet(password, function(data){
+    data // returns seed
+})
+
+logIn(password, seed, function(data){
+    // setSeed()
+        // create global_keystore from seed and lightwallet pwDerivedKey
+    // setWeb3Provider
+        // web3Provider = new (pwDerivedKey)
+        // web3.setProvider(web3Provider)
+    data // returns sign in complete
+})
