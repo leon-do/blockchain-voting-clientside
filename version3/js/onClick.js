@@ -1,16 +1,3 @@
-function onClick_NewWallet(){
-    /*
-        argument 1: password
-        returns
-            1: seed
-            2: user address
-    */
-    newWallet('password', function(seed, userAddress){
-        console.log(seed)
-        console.log(userAddress)
-    })   
-}
-
 //Vote button
 function onClick_vote() {
     var web3 = new Web3();
